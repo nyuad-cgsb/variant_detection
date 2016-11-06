@@ -1,7 +1,0 @@
-#TASK tags=Sample_5
-gatk -T VariantFiltration \
-    -R /scratch/Reference_Genomes/Public/Vertebrate_mammalian/Homo_sapiens/ENSEMBL-release-81-GRCh38/Homo_sapiens.GRCh38.dna.toplevel.fa \
-    -I /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/gatk/Sample_5_haplotype.realigned.withrg.csorted.cleaned.aligned.vcf \
-    --filterExpression "QD '<' 2.0 || FS '>' 60.0 || MQ '<' 40.0 || MQRankSum '<' -12.5 || ReadPosRankSum '<' -8.0" \
-    --filterName "my_snp_filter" \
-    -o /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/gatk/Sample_5_my_snp_filter.haplotype.realigned.mdup.csorted.cleaned.aligned.vcf

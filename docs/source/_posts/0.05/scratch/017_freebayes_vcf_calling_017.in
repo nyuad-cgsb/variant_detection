@@ -1,5 +1,0 @@
-#TASK tags=Sample_5
-mkdir -p /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/freebayes && \
-freebayes -f /scratch/Reference_Genomes/Public/Vertebrate_mammalian/Homo_sapiens/ENSEMBL-release-81-GRCh38/Homo_sapiens.GRCh38.dna.toplevel.fa \
-  /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/gatk/Sample_5_realigned.withrg.csorted.cleaned.aligned.bam \
-  > /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/freebayes/Sample_5_freebayes_raw.vcf

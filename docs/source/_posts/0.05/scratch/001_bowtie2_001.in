@@ -1,6 +1,0 @@
-#TASK tags=Sample_5
-mkdir -p /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2 && \
-bowtie2 -p 12 -x /scratch/Reference_Genomes/Public/Vertebrate_mammalian/Homo_sapiens/ENSEMBL-release-81-GRCh38/Homo_sapiens.GRCh38.dna.toplevel \
--1 /scratch/gencore/nov_dalma_training/resequencing/data/processed/Sample_5/trimmomatic/Sample_5_read1_trimmomatic_1PE.gz \
--2 /scratch/gencore/nov_dalma_training/resequencing/data/processed/Sample_5/trimmomatic/Sample_5_read2_trimmomatic_2PE.gz \
--S /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/Sample_5_aligned.sam

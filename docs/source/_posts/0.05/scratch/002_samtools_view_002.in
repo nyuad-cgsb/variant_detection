@@ -1,4 +1,0 @@
-#TASK tags=Sample_5
-mkdir -p /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools && \
-    samtools view -b -S /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/Sample_5_aligned.sam \
-    > /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.bam

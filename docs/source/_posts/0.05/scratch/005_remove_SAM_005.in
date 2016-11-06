@@ -1,2 +1,0 @@
-#TASK tags=Sample_5
-rm -rf /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/Sample_5_aligned.sam

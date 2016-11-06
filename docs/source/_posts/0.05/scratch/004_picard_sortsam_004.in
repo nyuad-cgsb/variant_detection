@@ -1,6 +1,0 @@
-#TASK tags=Sample_5
-picard -Xmx2g  SortSam \
-    INPUT=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_cleaned.aligned.bam \
-    O=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_csorted.cleaned.aligned.bam \
-    SO=coordinate \
-    TMP_DIR=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/tmp
