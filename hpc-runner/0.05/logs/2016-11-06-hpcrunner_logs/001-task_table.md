@@ -6,7 +6,7 @@ tags:
 title: Process Table
 ---
 
-||Version|| Scheduler Id || Jobname || Task Tags || ProcessID || ExitCode || Duration ||
+|Version| Scheduler Id | Jobname | Task Tags | ProcessID | ExitCode | Duration |
 |0.05|24591|002_samtools_view|Sample_5|20703|0|0 years, 00 months, 0 days, 00 hours, 00 minutes, 09 seconds|
 |0.05|24595|006_samtools_sort|Sample_5|14714|0|0 years, 00 months, 0 days, 00 hours, 00 minutes, 03 seconds|
 |0.05|24594|005_remove_SAM|Sample_5|21714|0|0 years, 00 months, 0 days, 00 hours, 00 minutes, 00 seconds|
