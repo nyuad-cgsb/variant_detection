@@ -7,3 +7,4 @@ docs/db.json
 docs/*.log
 docs/node_modules/
 docs/.deploy*/
+docs/themes
