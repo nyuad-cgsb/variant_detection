@@ -8,3 +8,4 @@ docs/*.log
 docs/node_modules/
 docs/.deploy*/
 docs/themes
+docs/_config.yml
