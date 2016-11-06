@@ -24,3 +24,5 @@ title: Process Table
 |0.05|24605|016_gatk_indel_realigner|Sample_5|30992|0|0 years, 00 months, 0 days, 00 hours, 01 minutes, 34 seconds|
 |0.05|24606|017_freebayes_vcf_calling|Sample_5|31705|0|0 years, 00 months, 0 days, 00 hours, 16 minutes, 10 seconds|
 |0.05|24607|018_freebayes_vcffilter|Sample_5|1026|0|0 years, 00 months, 0 days, 00 hours, 00 minutes, 01 seconds|
+|0.05|24608|019_gatk_haplotypecaller|Sample_5|31706|-1|0 years, 00 months, 0 days, 00 hours, 183 minutes, 37 seconds|
+|0.05|24609|020_gatk_variant_filtration|Sample_5|7774|-1|0 years, 00 months, 0 days, 00 hours, 00 minutes, 04 seconds|
