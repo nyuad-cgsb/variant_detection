@@ -1,4 +1,9 @@
 data
 data/*
-hexo/node_modules
 docs/source
+docs/.DS_Store
+docs/Thumbs.db
+docs/db.json
+docs/*.log
+docs/node_modules/
+docs/.deploy*/
