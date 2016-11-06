@@ -1,0 +1,30 @@
+<% if (site.posts.length){ %>
+<div class="row">
+        <div class="ibox float-e-margins">
+            <!--BEGIN ibox-title-->
+            <div class="ibox-title">
+                <h5>Recents</h5>
+                <div class="ibox-tools">
+                    <a class="collapse-link">
+                        <i class="fa fa-chevron-up"></i>
+                    </a>
+                    <a class="close-link">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </div>
+            </div>
+            <!--END ibox-title-->
+            <!--BEGIN ibox-content-->
+            <div class="ibox-content">
+              <ul>
+                <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
+                  <li>
+                    <a href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            </div>
+            <!--END ibox-content-->
+    </div>
+</div>
+<% } %>

@@ -1,0 +1,6 @@
+#TASK tags=Sample_5
+picard -Xmx2g CollectMultipleMetrics \
+    TMP_DIR=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/tmp \
+    I=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_csorted.cleaned.aligned.bam \
+    O=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_collmulmetr.csorted.cleaned.aligned \
+    PROGRAM=CollectAlignmentSummaryMetrics PROGRAM=CollectInsertSizeMetrics PROGRAM=QualityScoreDistribution PROGRAM=MeanQualityByCycle

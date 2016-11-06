@@ -1,0 +1,7 @@
+#TASK tags=Sample_5
+picard -Xmx2g MarkDuplicates \
+    M=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_markDup_metrics_file.txt \
+    I=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_withrg.csorted.cleaned.aligned.bam \
+    O=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_mdup.withrg.csorted.cleaned.aligned.bam \
+    MAX_FILE_HANDLES_FOR_READ_ENDS_MAP=100 \
+    TMP_DIR=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/tmp

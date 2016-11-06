@@ -1,0 +1,4 @@
+#TASK tags=Sample_5
+samtools sort -@ 6 /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.bam \
+    > /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.bam && \
+    samtools index /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.bam

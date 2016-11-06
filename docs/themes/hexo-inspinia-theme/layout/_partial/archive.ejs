@@ -1,0 +1,38 @@
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+      <!--Starting Article!-->
+    <%- partial('article', {post: post, index: true}) %>
+      <!--Ending Article!-->
+  <% }) %>
+  <% if (page.total > 1){ %>
+          <nav id="page-nav">
+              <%- paginator({
+                  prev_text: '&laquo; Prev',
+                  next_text: 'Next &raquo;'
+              }) %>
+      </nav>
+      <!--Where does this come from?-->
+  </section>
+  <% } %>
+<% } else { %>
+  <% var last; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div>
+      <% } %>
+      <% last = year; %>
+      <div class="ibox">
+          <div class="ibox-content blog">
+              <i class="fa fa-clock-o"></i>
+              <a href="<%- url_for('archives/' + year) %>"
+                  class="archive-year"><strong>Year: </strong> <%= year %></a>
+          </div>
+      </div>
+    <% } %>
+    <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+  <% }) %>
+  <% if (page.posts.length){ %>
+  <% } %>
+<% } %>

@@ -1,0 +1,6 @@
+[submodule "hexo-inspinia-theme"]
+	path = hexo-inspinia-theme
+	url = git@bitbucket.org:jerowe/hexo-inspinia-theme.git
+[submodule "docs/themes/hexo-inspinia-theme"]
+	path = docs/themes/hexo-inspinia-theme
+	url = git@bitbucket.org:jerowe/hexo-inspinia-theme.git

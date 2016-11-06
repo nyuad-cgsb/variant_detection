@@ -1,0 +1,4 @@
+#TASK tags=Sample_5
+picard -Xmx2g BuildBamIndex \
+    I=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_withrg.csorted.cleaned.aligned.bam \
+    TMP_DIR=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/tmp

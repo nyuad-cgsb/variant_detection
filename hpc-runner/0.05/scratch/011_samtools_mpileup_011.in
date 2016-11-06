@@ -1,0 +1,4 @@
+#TASK tags=Sample_5
+samtools mpileup -ugf /scratch/Reference_Genomes/Public/Vertebrate_mammalian/Homo_sapiens/ENSEMBL-release-81-GRCh38/Homo_sapiens.GRCh38.dna.toplevel.fa \
+    /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.bam | bcftools call -vmO z -o \
+    /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.vcf.gz

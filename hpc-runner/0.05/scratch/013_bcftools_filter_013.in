@@ -1,0 +1,5 @@
+#TASK tags=Sample_5
+bcftools filter -O z \
+    -o /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_filteredQ10.aligned.sorted.vcf.gz \
+    -s LOWQUAL -i'%QUAL>10' \
+    /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.vcf.gz

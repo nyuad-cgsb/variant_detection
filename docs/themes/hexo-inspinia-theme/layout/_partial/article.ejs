@@ -1,0 +1,70 @@
+
+    <div id="<%= post.layout %>-<%= post.slug %>" class="ibox">
+            <!--BEGIN Title-->
+            <% if (!index){ %>
+            <!--This is an article-->
+                <div class="ibox-content article">
+                <div class="text-center article-title">
+                    <span class="text-muted">
+                        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                        <%- partial('post/category') %>
+                    </span>
+                    <%- partial('post/gallery') %>
+                    <% if (post.link || post.title){ %>
+                        <%- partial('post/title', {class_name: ''}) %>
+                    <% } %>
+                </div>
+            <% } else { %>
+                <!--This the index/blog listing-->
+                <div class="ibox-content blog">
+                    <%- partial('post/gallery') %>
+                    <% if (post.link || post.title){ %>
+                    <%- partial('post/title', {class_name: 'btn-link'}) %>
+                    <span class="text-muted">
+                        <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+                        <%- partial('post/category') %>
+                    </span>
+                <% } %>
+
+            <% } %>
+            <!--END Title-->
+
+
+                <!--BEGIN Post Content-->
+                <div id="entry">
+                    <!--Add a condition here to force wrap for long articles-->
+                    <% if (post.excerpt && index){ %>
+                        <%- post.excerpt %>
+                    <% if (theme.excerpt_link){ %>
+                        <p>
+                            <a class="btn-link" href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+                        </p>
+                    <% } %>
+                <% } else { %>
+                        <%- post.content %>
+                <% } %>
+                </div>
+                <!--END Post CONTENT-->
+
+                    <div class="ibox-footer">
+                        <% if (post.comments && config.disqus_shortname){ %>
+                            <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
+                        <% } %>
+                        <%- partial('post/tag') %>
+                        <!--BEGIN Post Nav-->
+                        <% if (!index){ %>
+                                <%- partial('post/nav') %>
+                        <% } %>
+                        <!--END Post Nav-->
+                    </div>
+
+
+        <% if (!index && post.comments && config.disqus_shortname){ %>
+            <section id="comments">
+            <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </section>
+    <% } %>
+    </div>
+</div>

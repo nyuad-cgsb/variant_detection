@@ -1,0 +1,2 @@
+#TASK tags=Sample_5
+tabix -p vcf /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.sorted.vcf.gz

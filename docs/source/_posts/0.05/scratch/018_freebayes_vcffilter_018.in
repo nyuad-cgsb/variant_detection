@@ -1,0 +1,4 @@
+#TASK tags=Sample_5
+mkdir -p /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/freebayes && \
+vcffilter -f "QUAL > 1 & QUAL / AO > 10 & SAF > 0 & SAR > 0 & RPR > 1 & RPL > 1" \
+  /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/freebayes/Sample_5_freebayes_raw.vcf > /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/freebayes/Sample_5_filtered.freebayes.vcf

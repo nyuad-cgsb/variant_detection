@@ -1,0 +1,120 @@
+<%- partial('_partial/head') %>
+<body class="no-skin-config">
+
+<div id="wrapper">
+
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+                <div class="dropdown profile-element">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear">
+                            <span class="block m-t-xs"> 
+                                <strong class="font-bold">Hello, Researcher!</strong>
+                            </span>
+                            <span class="text-muted text-xs block">Human</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="logo-element">
+                    CGSB
+                </div>
+                </li>
+                <li>
+                <a href="/hpc-blog/index.html"><i class="fa fa-flask"></i> <span class="nav-label">HPC Reports</span></a>
+                </li>
+                <li>
+                <a href="#"><i class="fa fa-globe"></i> <span class="nav-label">JBrowse</span><span class="label label-info pull-right">NEW</span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="toastr_notifications.html">JBrowse Iframe!</a></li>
+                </ul>
+                </li>
+                <li>
+                <a href="#"><i class="fa fa-table"></i> <span class="nav-label">CBSB Interactive Portal</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a href="table_basic.html">Something with iPython</a></li>
+                </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                    <span class="m-r-sm text-muted welcome-message">CGSB - HPC Lab Notebook</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--BEGIN Breadcrumbs-->
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Lab Notebook</h2>
+                <ol class="breadcrumb">
+                    <% for (var i in theme.menu){ %>
+                    <li>
+                    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+                    </li>
+                    <% } %>
+                </ol>
+            </div>
+        </div>
+        <!--END BREADCRUMBS-->
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div id="wrap" class="row">
+                <div class="outer">
+                    <!--BEGIN Main Content-->
+                    <div class="col-lg-8">
+                        <%- body %>
+                    </div>
+                    <!--END Main Content-->
+
+                    <!--BEGIN Widget Sidebars-->
+                    <div class="col-lg-4">
+                        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+                    </div>
+                    <!--END Widget Sidebars-->
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="pull-right">
+                    <!--Add a URL here-->
+                    Powered by <strong>Hexo</strong> Free.
+                </div>
+                <div>
+                    <strong>CGSB GenCore</strong> NYUAD &copy; 2015-2016
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Inspinia Scripts-->
+<%- js('inspinia/js/jquery-2.1.1.js') %>
+<%- js('inspinia/js/bootstrap.min') %>
+<%- js('inspinia/js/plugins/metisMenu/jquery.metisMenu') %>
+<%- js('inspinia/js/plugins/slimscroll/jquery.slimscroll.min') %>
+<%- js('inspinia/js/inspinia') %>
+<%- js('inspinia/js/plugins/pace/pace.min') %>
+
+<!--Hexo/FancyBox Scripts-->
+<%- css('hexo/fancybox/jquery.fancybox') %>
+<%- js('hexo/fancybox/jquery.fancybox.pack') %>
+<%- js('hexo/js/hexo-script') %>
+
+</body>
+
+
+</html>

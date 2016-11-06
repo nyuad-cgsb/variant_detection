@@ -1,0 +1,6 @@
+#TASK tags=Sample_5
+mkdir -p /scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard && \
+picard -Xmx2g CleanSam \
+    INPUT=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/samtools/Sample_5_aligned.bam \
+    O=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/picard/Sample_5_cleaned.aligned.bam \
+    TMP_DIR=/scratch/gencore/nov_dalma_training/resequencing/data/analysis/Sample_5/bowtie2/tmp
